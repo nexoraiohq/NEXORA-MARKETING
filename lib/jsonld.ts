@@ -1,4 +1,5 @@
 const SITE_URL = "https://nexoraio.vercel.app";
+const MARKETING_URL = "https://nexoraio-marketing.vercel.app";
 
 export type JsonLdNode = Record<string, unknown>;
 
@@ -126,6 +127,82 @@ export function organizationJsonLd(): JsonLdNode {
         // NOTE: no SearchAction here on purpose. The site has no search page,
         // and advertising a `?s={search_term_string}` URL made Google crawl and
         // index a phantom query URL that served a duplicate of the homepage.
+      },
+    ],
+  };
+}
+
+/**
+ * Schema for THIS marketing origin (nexoraio-marketing.vercel.app):
+ * WebSite + WebPage + the service being sold, all tied back to the same
+ * Organization entity as the main site.
+ */
+export function marketingJsonLd(title: string, description: string): JsonLdNode {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${MARKETING_URL}/#website`,
+        url: `${MARKETING_URL}/`,
+        name: "Nexora Studio",
+        alternateName: "Nexora",
+        description,
+        inLanguage: "en-KE",
+        publisher: { "@id": `${SITE_URL}/#business` },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${MARKETING_URL}/#webpage`,
+        url: `${MARKETING_URL}/`,
+        name: title,
+        description,
+        inLanguage: "en-KE",
+        isPartOf: { "@id": `${MARKETING_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#business` },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${MARKETING_URL}/#service`,
+        name: "Nexora Studio — Web design in Kenya",
+        url: `${MARKETING_URL}/`,
+        image: `${SITE_URL}/assets/favicon/nexora-favicon/web-app-manifest-512x512.png`,
+        logo: `${SITE_URL}/assets/favicon/nexora-favicon/web-app-manifest-512x512.png`,
+        description:
+          "Fast, mobile-first websites for salons, barbershops, spas and SMEs across Kenya — with WhatsApp booking, SEO foundations and ongoing support. Free quote on WhatsApp.",
+        serviceType: [
+          "Web design",
+          "Website development",
+          "Local SEO services",
+          "WhatsApp booking integration",
+        ],
+        provider: { "@id": `${SITE_URL}/#business` },
+        areaServed: { "@type": "Country", name: "Kenya" },
+        priceRange: "KES 15,000 - KES 250,000",
+        telephone: "+254713324672",
+        availableChannel: {
+          "@type": "ServiceChannel",
+          serviceUrl: `https://wa.me/254713324672`,
+          servicePhone: { "@type": "ContactPoint", telephone: "+254713324672" },
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Websites we build",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: "Booking website with WhatsApp" },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: "Business website" },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: "Salon & spa website" },
+            },
+          ],
+        },
       },
     ],
   };

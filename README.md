@@ -1,6 +1,6 @@
 # NEXORA-MARKETING
 
-Standalone marketing landing page for **[marketing.nexoraio.vercel.app](https://marketing.nexoraio.vercel.app/)**.
+Standalone marketing landing page for **[nexoraio-marketing.vercel.app](https://nexoraio-marketing.vercel.app/)**.
 
 - The main website lives in the separate **NEXORA** repository (`nexoraio.vercel.app`).
 - This project serves one page: the marketing landing page at the domain root (`/`).
@@ -23,7 +23,7 @@ npm run typecheck  # tsc --noEmit
 | --- | --- |
 | `/` | The marketing landing page |
 | `/robots.txt` | Allows crawling, hosts the sitemap for this origin |
-| `/sitemap.xml` | Single entry for `https://marketing.nexoraio.vercel.app/` |
+| `/sitemap.xml` | Single entry for `https://nexoraio-marketing.vercel.app/` |
 | `/_not-found` | Branded 404 (see `app/not-found.tsx`) |
 
 ## Links
@@ -41,7 +41,7 @@ app/
   marketing.css    # all .mk* styles
   layout.tsx       # root layout: metadata/canonical, fonts, GTM, global CSS
   globals.css      # @import "tailwindcss" (loaded first)
-  robots.ts        # robots.txt for marketing.nexoraio.vercel.app
+  robots.ts        # robots.txt for nexoraio-marketing.vercel.app
   sitemap.ts       # sitemap.xml
   not-found.tsx    # branded 404
 components/
@@ -64,5 +64,5 @@ which is why most icons rendered blank).
 
 ## Deploy
 
-Vercel project → domain `marketing.nexoraio.vercel.app`
+Vercel project → domain `nexoraio-marketing.vercel.app`
 (`vercel.json` is already framework-agnostic `nextjs`).

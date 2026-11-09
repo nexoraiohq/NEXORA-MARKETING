@@ -1,9 +1,11 @@
 import { LOGO_DARK_DATA_URI } from "@/lib/logos";
 import { whatsappLink } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
 
 import {
   AUDIENCES,
   BUILD,
+  FAQ,
   FEATURES,
   FOOTER_COLS,
   INDUSTRIES,
@@ -50,7 +52,8 @@ export default function MarketingPage() {
             Main site
           </a>
           <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark">
-            Start a Conversation
+            <i className="fab fa-whatsapp" aria-hidden="true"></i>
+            Chat on WhatsApp
           </a>
         </div>
       </header>
@@ -66,12 +69,14 @@ export default function MarketingPage() {
 
           <p className="mk-sub">
             Nexora designs and builds fast, mobile-first websites for salons, barbershops, spas and
-            growing businesses across Kenya — turning visitors into WhatsApp enquiries and bookings.
+            growing businesses across Kenya — with a WhatsApp button on every page, so visitors turn
+            into enquiries, bookings and paying customers.
           </p>
 
           <div className="mk-hero-actions">
             <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark">
-              Start a Conversation
+              <i className="fab fa-whatsapp" aria-hidden="true"></i>
+              Get My Free Quote on WhatsApp
             </a>
             <a href="#build" className="mk-pill mk-pill-ghost">
               See what we build
@@ -80,7 +85,7 @@ export default function MarketingPage() {
 
           <p className="mk-trust">
             <img src={LOGO_DARK_DATA_URI} width={70} height={47} alt="" aria-hidden="true" />
-            Kisii-based studio · trusted by businesses across Kenya
+            Kisii-based studio · Free quote on WhatsApp · trusted across Kenya
           </p>
         </section>
 
@@ -133,6 +138,7 @@ export default function MarketingPage() {
           <h2 className="mk-h2">What we build</h2>
           <p className="mk-lead">
             Three kinds of project, one standard — designed, built and launched by the same team.
+            Not sure which one you need? Ask on WhatsApp and we&apos;ll tell you straight.
           </p>
 
           <div className="mk-build">
@@ -160,7 +166,8 @@ export default function MarketingPage() {
         <section className="mk-section mk-why" id="why">
           <h2 className="mk-h2">Why Nexora</h2>
           <p className="mk-lead">
-            Built in-house from strategy to launch — full control over quality at every step.
+            Built in-house from strategy to launch — full control over quality at every step, and
+            every decision made to bring you customers.
           </p>
 
           <div className="mk-features">
@@ -180,7 +187,8 @@ export default function MarketingPage() {
         <section className="mk-section">
           <h2 className="mk-h2">Built for businesses like you</h2>
           <p className="mk-lead">
-            We know your industry — tell us who you serve and we&apos;ll shape the site around them.
+            We know your industry — message us on WhatsApp and we&apos;ll show you sites built for
+            businesses that look like yours.
           </p>
 
           <div className="mk-audience">
@@ -206,7 +214,7 @@ export default function MarketingPage() {
         {/* ── PROCESS ── */}
         <section className="mk-section mk-process" id="process">
           <h2 className="mk-h2">How it works</h2>
-          <p className="mk-lead">From first call to launch day — three simple steps.</p>
+          <p className="mk-lead">From your first WhatsApp message to launch day — three simple steps.</p>
 
           <ol className="mk-steps">
             {STEPS.map((s) => (
@@ -220,6 +228,47 @@ export default function MarketingPage() {
           </ol>
         </section>
 
+        {/* ── FAQ (conversion copy + FAQPage schema) ── */}
+        <section className="mk-section mk-faq" id="faq">
+          <h2 className="mk-h2">Questions, answered</h2>
+          <p className="mk-lead">
+            What businesses ask us before getting their website — or just ask us yourself on
+            WhatsApp.
+          </p>
+
+          <div className="mk-faq-list">
+            {FAQ.map((item) => (
+              <details className="mk-faq-item" key={item.q}>
+                <summary>
+                  {item.q}
+                  <i className="fas fa-angle-right" aria-hidden="true"></i>
+                </summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
+
+          <div className="mk-faq-cta">
+            <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark">
+              <i className="fab fa-whatsapp" aria-hidden="true"></i>
+              Ask us anything on WhatsApp
+            </a>
+            <span>Free, no obligation.</span>
+          </div>
+        </section>
+
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQ.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }}
+        />
+
         {/* ── DARK CTA ── */}
         <section className="mk-cta">
           <span className="mk-shape sh-1" aria-hidden="true"></span>
@@ -227,15 +276,16 @@ export default function MarketingPage() {
           <span className="mk-shape sh-3" aria-hidden="true"></span>
           <span className="mk-shape sh-4" aria-hidden="true"></span>
 
-          <h2>Ready to grow?</h2>
+          <h2>Let&apos;s get you customers.</h2>
           <p>
-            Tell us about your business and where you want to go. We&apos;ll recommend the right
-            approach and a clear quote — no pressure, no jargon.
+            Message us on WhatsApp — tell us about your business and where you want to go. You&apos;ll
+            get honest advice, a clear plan and a fixed quote. No pressure, no jargon.
           </p>
           <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-accent">
-            Start a Conversation
-            <i className="fas fa-angle-right" aria-hidden="true"></i>
+            <i className="fab fa-whatsapp" aria-hidden="true"></i>
+            Get My Free Quote on WhatsApp
           </a>
+          <p className="mk-cta-note">Free and no obligation — the sooner we talk, the sooner you launch.</p>
         </section>
       </main>
 
@@ -248,6 +298,10 @@ export default function MarketingPage() {
             </a>
             <p>Building the digital systems that move businesses forward.</p>
             <span>Kisii, Kenya</span>
+            <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark mk-foot-wa">
+              <i className="fab fa-whatsapp" aria-hidden="true"></i>
+              Chat on WhatsApp
+            </a>
           </div>
 
           {FOOTER_COLS.map((col) => (
@@ -267,6 +321,18 @@ export default function MarketingPage() {
           <a href="https://nexoraio.vercel.app/">Visit the main site &rarr;</a>
         </div>
       </footer>
+
+      {/* ── STICKY WHATSAPP CTA — always one tap away ── */}
+      <a
+        href={wa}
+        target="_blank"
+        rel="noopener"
+        className="mk-wa-fab"
+        aria-label="Chat with Nexora on WhatsApp — get your free website quote"
+      >
+        <i className="fab fa-whatsapp" aria-hidden="true"></i>
+        <span>Get your free quote</span>
+      </a>
     </div>
   );
 }

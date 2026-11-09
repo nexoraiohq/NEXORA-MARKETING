@@ -1,10 +1,17 @@
+/**
+ * All marketing copy lives here.
+ * Primary goal of every string: get the visitor to WhatsApp to start their website.
+ */
+
+/* Pre-qualified WhatsApp opener — mentions a website immediately so replies start qualified. */
 export const WA_TEXT =
-  "Hi Nexora, I'm on the marketing page and would like to talk about how Nexora can help my business move forward.";
+  "Hi Nexora, I'd like a website for my business. Can you tell me how it works and send me a quote?";
 
 export const NAV = [
   { label: "Why Nexora", href: "#why" },
   { label: "What we build", href: "#build" },
   { label: "How it works", href: "#process" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export const INDUSTRIES = [
@@ -18,6 +25,7 @@ export const INDUSTRIES = [
 ];
 
 export const SERVICES_STRIP = [
+  "FREE QUOTE",
   "WEB DESIGN",
   "SEO FOUNDATIONS",
   "BOOKING WEBSITES",
@@ -29,19 +37,19 @@ export const SERVICES_STRIP = [
 export const STATS = {
   dark: {
     value: "KES 15k–250k",
-    label: "Typical project investment",
-    body: "Clear quote before anything starts — no surprises, no hidden fees.",
+    label: "Typical website investment",
+    body: "Message us on WhatsApp with your budget and you get a fixed, itemised quote before anything starts — no surprises, no hidden fees.",
   },
   light: [
     {
-      value: "6 steps",
-      label: "From first call to launch day",
-      body: "A proven process you approve at every stage.",
+      value: "Same-day",
+      label: "Replies on WhatsApp",
+      body: "A real person from the team that builds your site answers — no bots, no call centre.",
     },
     {
-      value: "50% deposit",
-      label: "To start, balance before launch",
-      body: "Fair, transparent terms built on trust.",
+      value: "1 tap",
+      label: "From visitor to paying customer",
+      body: "Every page we build ends in a WhatsApp button, so enquiries never get lost in a form.",
     },
   ],
 };
@@ -50,45 +58,45 @@ export const FEATURES = [
   {
     icon: "fab fa-whatsapp",
     tone: "t-indigo",
-    title: "WhatsApp booking",
-    body: "Customers start a booking or enquiry in one tap — the channel Kenyan businesses already live on.",
+    title: "WhatsApp on every page",
+    body: "Visitors message you in one tap — straight into the channel Kenyan customers already live on, so hot leads never cool off in a contact form.",
   },
   {
     icon: "fas fa-magnifying-glass",
     tone: "t-cyan",
-    title: "SEO foundations",
-    body: "Search-friendly structure and local SEO foundations that put you in front of people already looking.",
+    title: "SEO that brings buyers",
+    body: "Search-friendly structure and local SEO that put you in front of people already looking for your service in Kenya.",
   },
   {
     icon: "fas fa-mobile-screen",
     tone: "t-violet",
-    title: "Mobile-first build",
-    body: "Designed for the phone in your customer's hand first, then perfected on every other screen.",
+    title: "Built for the phone first",
+    body: "Most of your customers browse on a phone — so that's where we design first, then perfect every other screen.",
   },
   {
     icon: "fas fa-bolt",
     tone: "t-cyan",
-    title: "Speed optimisation",
-    body: "Lightweight, fast-loading pages so visitors never bounce before they see what you offer.",
+    title: "Speed that keeps customers",
+    body: "Lightweight, fast-loading pages so nobody bounces before they see what you offer.",
   },
   {
     icon: "fas fa-location-dot",
     tone: "t-indigo",
     title: "Google Business setup",
-    body: "Your listing, profile and maps presence configured so local customers can find and trust you.",
+    body: "Your listing, profile and maps presence configured so local customers find you first — and trust you enough to message.",
   },
   {
     icon: "fas fa-headset",
     tone: "t-violet",
     title: "Support after launch",
-    body: "We stay available for updates, fixes and improvements so the site keeps pace with your business.",
+    body: "We stay available for updates, fixes and improvements, so your site keeps selling long after launch day.",
   },
 ];
 
 export const BUILD = [
   {
     title: "Booking websites",
-    body: "Appointment journeys with WhatsApp on standby at every step — fewer drop-offs, more bookings.",
+    body: "Appointment journeys with a WhatsApp button at every step — fewer drop-offs, more bookings in the diary.",
     tone: "b-dark",
     ribbon: "",
     screen: "booking",
@@ -102,7 +110,7 @@ export const BUILD = [
   },
   {
     title: "Salon & spa sites",
-    body: "Gallery-first designs that sell your work and make booking effortless.",
+    body: "Gallery-first designs that sell your work and make booking effortless — while you're busy with clients.",
     tone: "b-light",
     ribbon: "POPULAR",
     screen: "salon",
@@ -115,42 +123,74 @@ export const AUDIENCES = [
     title: "Salons & beauty",
     body: "Stylists, treatments and galleries — a site that fills your appointment book while you work.",
     href: "https://nexoraio.vercel.app/salon-website-design-kenya",
-    cta: "Learn more",
+    cta: "See salon websites",
   },
   {
     tone: "a-cream",
     title: "SMEs & local business",
     body: "Trusted, professional presence that makes small businesses compete with anyone in Kenya.",
     href: "https://nexoraio.vercel.app/web-design-kenya",
-    cta: "Learn more",
+    cta: "See web design services",
   },
   {
     tone: "a-violet",
     title: "Spas & wellness",
     body: "Calm, premium experiences online that match the care you give in person.",
     href: "https://nexoraio.vercel.app/spa-website-design-kenya",
-    cta: "Learn more",
+    cta: "See spa websites",
   },
 ];
 
 export const STEPS = [
   {
     n: "1",
-    title: "Tell us your goal",
-    body: "A short call or WhatsApp chat about your business and where you want to go.",
+    title: "Message us on WhatsApp",
+    body: "Tell us what your business does and what you want the site to achieve. Two minutes, no forms.",
     tag: "Free, no pressure",
   },
   {
     n: "2",
-    title: "We design & build",
-    body: "A brand-matched design you approve, then fast mobile-first code with SEO wired in.",
-    tag: "You review first",
+    title: "Get a plan & fixed quote",
+    body: "We recommend the right approach, timeline and a fixed price — you approve before anything starts.",
+    tag: "No obligation",
   },
   {
     n: "3",
-    title: "Launch & grow",
-    body: "We go live — then keep improving the site with you as your business grows.",
+    title: "We build, you approve, we launch",
+    body: "Design you sign off, a fast mobile-first build with SEO and WhatsApp wired in — then you go live.",
     tag: "Support included",
+  },
+];
+
+/* FAQ doubles as conversion copy and the FAQPage schema on the page. */
+export const FAQ = [
+  {
+    q: "How much does a website cost in Kenya?",
+    a: "Most Nexora projects land between KES 15,000 and KES 250,000 depending on the pages, features and integrations you need. Message us on WhatsApp with your budget and you'll get a fixed quote before any work starts.",
+  },
+  {
+    q: "How long does it take to build?",
+    a: "A typical business or booking site is designed, built and launched within a few weeks. Tell us your deadline on WhatsApp and we'll be honest about whether we can hit it.",
+  },
+  {
+    q: "Can customers book through WhatsApp?",
+    a: "Yes — that's our specialty. Every page ends in a WhatsApp button that opens a chat with your business pre-filled with the right context, so enquiries arrive ready to convert.",
+  },
+  {
+    q: "Do you work with businesses outside Kisii?",
+    a: "Yes. Nexora is based in Kisii but builds for salons, barbershops, spas and SMEs across all of Kenya — everything is handled on call and WhatsApp, so distance never slows the project down.",
+  },
+  {
+    q: "What do you need from me to get started?",
+    a: "Just a short WhatsApp chat about your business, your goals, and any logo or photos you already have. We handle the design, the copy structure and the rest.",
+  },
+  {
+    q: "Do you offer support after the site goes live?",
+    a: "Yes. Updates, fixes, new pages and improvements are all covered — your site should keep pace with your business, not go stale after launch.",
+  },
+  {
+    q: "How do I pay?",
+    a: "A 50% deposit starts the project and the balance is due before launch. Everything is written down in your quote — no hidden fees, no surprises.",
   },
 ];
 
@@ -179,6 +219,7 @@ export const FOOTER_COLS = [
       { label: "Why Nexora", href: "#why" },
       { label: "What we build", href: "#build" },
       { label: "How it works", href: "#process" },
+      { label: "FAQ", href: "#faq" },
       { label: "Main site", href: "https://nexoraio.vercel.app/" },
     ],
   },

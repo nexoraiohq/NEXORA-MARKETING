@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 
 import { JsonLd } from "@/components/JsonLd";
-import { organizationJsonLd } from "@/lib/jsonld";
+import { marketingJsonLd, organizationJsonLd } from "@/lib/jsonld";
 
 /* Full Font Awesome 7 (all icons) straight from the package. */
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -13,8 +13,12 @@ import "@/styles/css/style.css";
 import "@/styles/css/responsive/style.css";
 import "./marketing.css";
 
-const SITE_URL = "https://marketing.nexoraio.vercel.app";
+const SITE_URL = "https://nexoraio-marketing.vercel.app";
 const GTM_ID = "GTM-TT9M5PKZ";
+
+const TITLE = "Web Design Kenya | Websites That Get You Clients | Nexora Studio";
+const DESCRIPTION =
+  "Nexora Studio builds fast, mobile-first websites for salons, barbershops, spas and SMEs across Kenya — with WhatsApp booking and SEO. Get a free quote on WhatsApp today.";
 
 const GTM_SNIPPET = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,32 +28,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Nexora Studio | Websites That Win Customers in Kenya",
-  description:
-    "Nexora Studio designs and builds fast, mobile-first websites for salons, barbershops, spas and SMEs across Kenya — with WhatsApp booking, SEO foundations and ongoing support.",
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: [
+    "web design Kenya",
+    "website design Kenya",
+    "web designer Kenya",
+    "web design Kisii",
+    "website developer Kenya",
+    "salon website Kenya",
+    "barbershop website Kenya",
+    "spa website Kenya",
+    "booking website Kenya",
+    "WhatsApp booking website",
+    "SME website Kenya",
+    "affordable website Kenya",
+    "SEO services Kenya",
+    "Google Business setup Kenya",
+    "Nexora Studio",
+  ],
   applicationName: "Nexora Studio",
   authors: [{ name: "Nexora Studio" }],
   publisher: "Nexora Studio",
   category: "technology",
   formatDetection: { telephone: false, address: false, email: false },
   alternates: { canonical: "/" },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     url: "/",
+    locale: "en_KE",
     siteName: "Nexora Studio",
-    title: "Nexora Studio | Websites That Win Customers in Kenya",
-    description:
-      "Nexora Studio designs and builds fast, mobile-first websites for salons, barbershops, spas and SMEs across Kenya.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: [
-      "/assets/favicon/nexora-favicon/web-app-manifest-512x512.png",
+      {
+        url: "/assets/favicon/nexora-favicon/web-app-manifest-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Nexora Studio — web design in Kenya",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexora Studio | Websites That Win Customers in Kenya",
-    description:
-      "Fast, mobile-first websites for Kenyan businesses — WhatsApp booking, SEO and ongoing support.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/assets/favicon/nexora-favicon/web-app-manifest-512x512.png"],
   },
   icons: {
@@ -126,7 +160,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </noscript>
         <Script src="/static/js/bodyclass.js" strategy="beforeInteractive" />
 
+        {/* Entity schema (brand, main site) + this origin's site/service schema. */}
         <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={marketingJsonLd(TITLE, DESCRIPTION)} />
 
         {children}
 

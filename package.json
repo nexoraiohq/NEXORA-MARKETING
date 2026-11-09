@@ -2,7 +2,7 @@
   "name": "nexora-marketing",
   "version": "1.0.0",
   "private": true,
-  "description": "Nexora Studio marketing landing page - marketing.nexoraio.vercel.app",
+  "description": "Nexora Studio marketing landing page - nexoraio-marketing.vercel.app",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

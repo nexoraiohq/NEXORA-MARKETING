@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 /**
  * NEXORA-MARKETING — standalone marketing site.
- * Serves https://marketing.nexoraio.vercel.app/ (root route only).
+ * Serves https://nexoraio-marketing.vercel.app/ (root route only).
  * The main site lives in the separate NEXORA repository.
  */
 const nextConfig: NextConfig = {
