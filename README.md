@@ -1,6 +1,6 @@
 # NEXORA-MARKETING
 
-Standalone marketing landing page for **[marketing.nexoraio.vercel.app](https://marketing.nexoraio.vercel.app/)**.
+Standalone marketing landing page for **[marketing.nexoraio.vercel.app](https://nexoraio-marketing.vercel.app)**.
 
 - The main website lives in the separate **NEXORA** repository (`nexoraio.vercel.app`).
 - This project serves one page: the marketing landing page at the domain root (`/`).
