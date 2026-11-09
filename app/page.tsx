@@ -53,7 +53,7 @@ export default function MarketingPage() {
           </a>
           <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark">
             <i className="fab fa-whatsapp" aria-hidden="true"></i>
-            Chat on WhatsApp
+            WhatsApp us
           </a>
         </div>
       </header>
@@ -68,15 +68,15 @@ export default function MarketingPage() {
           </h1>
 
           <p className="mk-sub">
-            Nexora designs and builds fast, mobile-first websites for salons, barbershops, spas and
-            growing businesses across Kenya — with a WhatsApp button on every page, so visitors turn
-            into enquiries, bookings and paying customers.
+            We build fast, mobile-first websites for salons, barbershops, spas and small businesses
+            across Kenya — and we put a WhatsApp button on every page, because that&apos;s how
+            business actually gets done here.
           </p>
 
           <div className="mk-hero-actions">
             <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark">
               <i className="fab fa-whatsapp" aria-hidden="true"></i>
-              Get My Free Quote on WhatsApp
+              Get a free quote
             </a>
             <a href="#build" className="mk-pill mk-pill-ghost">
               See what we build
@@ -85,7 +85,7 @@ export default function MarketingPage() {
 
           <p className="mk-trust">
             <img src={LOGO_DARK_DATA_URI} width={70} height={47} alt="" aria-hidden="true" />
-            Kisii-based studio · Free quote on WhatsApp · trusted across Kenya
+            Kisii-based studio · We reply the same day · Sites live across Kenya
           </p>
         </section>
 
@@ -137,8 +137,8 @@ export default function MarketingPage() {
         <section className="mk-section" id="build">
           <h2 className="mk-h2">What we build</h2>
           <p className="mk-lead">
-            Three kinds of project, one standard — designed, built and launched by the same team.
-            Not sure which one you need? Ask on WhatsApp and we&apos;ll tell you straight.
+            Three types of project, all designed and built by the same small team in Kisii — no
+            outsourcing, no account managers. Not sure which one you need? Ask us.
           </p>
 
           <div className="mk-build">
@@ -166,8 +166,7 @@ export default function MarketingPage() {
         <section className="mk-section mk-why" id="why">
           <h2 className="mk-h2">Why Nexora</h2>
           <p className="mk-lead">
-            Built in-house from strategy to launch — full control over quality at every step, and
-            every decision made to bring you customers.
+            The person you talk to is the person building your site. Here&apos;s what that gets you.
           </p>
 
           <div className="mk-features">
@@ -187,8 +186,8 @@ export default function MarketingPage() {
         <section className="mk-section">
           <h2 className="mk-h2">Built for businesses like you</h2>
           <p className="mk-lead">
-            We know your industry — message us on WhatsApp and we&apos;ll show you sites built for
-            businesses that look like yours.
+            These three we know inside out. For anything else, tell us about your business and
+            we&apos;ll be straight with you about whether we&apos;re a good fit.
           </p>
 
           <div className="mk-audience">
@@ -214,7 +213,7 @@ export default function MarketingPage() {
         {/* ── PROCESS ── */}
         <section className="mk-section mk-process" id="process">
           <h2 className="mk-h2">How it works</h2>
-          <p className="mk-lead">From your first WhatsApp message to launch day — three simple steps.</p>
+          <p className="mk-lead">From the first message to the day you go live.</p>
 
           <ol className="mk-steps">
             {STEPS.map((s) => (
@@ -230,10 +229,10 @@ export default function MarketingPage() {
 
         {/* ── FAQ (conversion copy + FAQPage schema) ── */}
         <section className="mk-section mk-faq" id="faq">
-          <h2 className="mk-h2">Questions, answered</h2>
+          <h2 className="mk-h2">Questions people actually ask</h2>
           <p className="mk-lead">
-            What businesses ask us before getting their website — or just ask us yourself on
-            WhatsApp.
+            Answered honestly — including the ones where the answer is &ldquo;you don&apos;t need
+            that yet&rdquo;.
           </p>
 
           <div className="mk-faq-list">
@@ -251,9 +250,9 @@ export default function MarketingPage() {
           <div className="mk-faq-cta">
             <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark">
               <i className="fab fa-whatsapp" aria-hidden="true"></i>
-              Ask us anything on WhatsApp
+              Ask us on WhatsApp
             </a>
-            <span>Free, no obligation.</span>
+            <span>We answer the same day.</span>
           </div>
         </section>
 
@@ -276,16 +275,16 @@ export default function MarketingPage() {
           <span className="mk-shape sh-3" aria-hidden="true"></span>
           <span className="mk-shape sh-4" aria-hidden="true"></span>
 
-          <h2>Let&apos;s get you customers.</h2>
+          <h2>Ready when you are.</h2>
           <p>
-            Message us on WhatsApp — tell us about your business and where you want to go. You&apos;ll
-            get honest advice, a clear plan and a fixed quote. No pressure, no jargon.
+            Send us a message about your business and where you&apos;d like it to be in a year.
+            You&apos;ll get a straight answer and a price — usually the same day.
           </p>
           <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-accent">
             <i className="fab fa-whatsapp" aria-hidden="true"></i>
-            Get My Free Quote on WhatsApp
+            Message us on WhatsApp
           </a>
-          <p className="mk-cta-note">Free and no obligation — the sooner we talk, the sooner you launch.</p>
+          <p className="mk-cta-note">No forms, no sales calls.</p>
         </section>
       </main>
 
@@ -300,7 +299,7 @@ export default function MarketingPage() {
             <span>Kisii, Kenya</span>
             <a href={wa} target="_blank" rel="noopener" className="mk-pill mk-pill-dark mk-foot-wa">
               <i className="fab fa-whatsapp" aria-hidden="true"></i>
-              Chat on WhatsApp
+              Get a price
             </a>
           </div>
 
@@ -331,7 +330,7 @@ export default function MarketingPage() {
         aria-label="Chat with Nexora on WhatsApp — get your free website quote"
       >
         <i className="fab fa-whatsapp" aria-hidden="true"></i>
-        <span>Get your free quote</span>
+        <span>Free quote</span>
       </a>
     </div>
   );

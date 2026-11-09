@@ -18,7 +18,7 @@ const GTM_ID = "GTM-TT9M5PKZ";
 
 const TITLE = "Web Design Kenya | Websites That Get You Clients | Nexora Studio";
 const DESCRIPTION =
-  "Nexora Studio builds fast, mobile-first websites for salons, barbershops, spas and SMEs across Kenya — with WhatsApp booking and SEO. Get a free quote on WhatsApp today.";
+  "Fast, mobile-first websites for salons, barbershops, spas and SMEs across Kenya. Built in Kisii by Nexora Studio — prices from KES 15,000, same-day reply on WhatsApp.";
 
 const GTM_SNIPPET = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
